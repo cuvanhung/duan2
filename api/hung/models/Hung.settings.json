@@ -1,0 +1,17 @@
+{
+  "connection": "default",
+  "collectionName": "hung",
+  "info": {
+    "name": "hung",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "ggg": {
+      "default": "",
+      "type": "text"
+    }
+  }
+}

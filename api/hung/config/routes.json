@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/hungs",
+      "handler": "Hung.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/hungs/count",
+      "handler": "Hung.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/hungs/:_id",
+      "handler": "Hung.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/hungs",
+      "handler": "Hung.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/hungs/:_id",
+      "handler": "Hung.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/hungs/:_id",
+      "handler": "Hung.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
