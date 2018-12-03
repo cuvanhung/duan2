@@ -1,0 +1,73 @@
+{
+  "connection": "default",
+  "collectionName": "course",
+  "info": {
+    "name": "course",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "default": "",
+      "type": "string"
+    },
+    "Slug": {
+      "default": "",
+      "type": "string"
+    },
+    "Skill": {
+      "default": "",
+      "type": "text"
+    },
+    "TotalTime": {
+      "default": "",
+      "type": "text"
+    },
+    "Time": {
+      "default": "",
+      "type": "text"
+    },
+    "Fee": {
+      "default": "",
+      "type": "text"
+    },
+    "Location": {
+      "default": "",
+      "type": "text"
+    },
+    "JapaneseName": {
+      "default": "",
+      "type": "string"
+    },
+    "JapaneseSkill": {
+      "default": "",
+      "type": "text"
+    },
+    "JapaneseTotalTime": {
+      "default": "",
+      "type": "text"
+    },
+    "JapaneseTime": {
+      "default": "",
+      "type": "text"
+    },
+    "JapaneseFee": {
+      "default": "",
+      "type": "text"
+    },
+    "JapaneseLocation": {
+      "default": "",
+      "type": "text"
+    },
+    "categories": {
+      "model": "categories",
+      "via": "courses"
+    },
+    "Openday": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

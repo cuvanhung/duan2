@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "class",
+  "info": {
+    "name": "class",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Class": {
+      "default": "",
+      "type": "string"
+    },
+    "Class_ID": {
+      "default": "",
+      "type": "string"
+    },
+    "students": {
+      "collection": "students",
+      "via": "class"
+    }
+  }
+}

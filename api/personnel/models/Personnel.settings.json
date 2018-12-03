@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "personnel",
+  "info": {
+    "name": "personnel",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "default": "",
+      "type": "string"
+    },
+    "Position": {
+      "default": "",
+      "type": "string"
+    },
+    "Information": {
+      "default": "",
+      "type": "text"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

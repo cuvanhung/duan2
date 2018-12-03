@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "advertisement",
+  "info": {
+    "name": "advertisement",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "default": "",
+      "type": "string"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "URL ": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "connection": "default",
+  "collectionName": "categories",
+  "info": {
+    "name": "categories",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "default": "",
+      "type": "string"
+    },
+    "Slug": {
+      "default": "",
+      "type": "string"
+    },
+    "Japanese_Name": {
+      "default": "",
+      "type": "string"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "contents": {
+      "model": "contents",
+      "via": "categories"
+    },
+    "courses": {
+      "collection": "course",
+      "via": "categories"
+    },
+    "news": {
+      "collection": "news",
+      "via": "categories"
+    },
+    "Parent": {
+      "model": "categories"
+    }
+  }
+}

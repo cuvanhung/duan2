@@ -1,0 +1,45 @@
+{
+  "connection": "default",
+  "collectionName": "registers",
+  "info": {
+    "name": "registers",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Fullname": {
+      "default": "",
+      "type": "string"
+    },
+    "Email": {
+      "default": "",
+      "type": "email"
+    },
+    "Class": {
+      "default": "",
+      "type": "string"
+    },
+    "Notes": {
+      "default": "",
+      "type": "text"
+    },
+    "Phone": {
+      "default": "",
+      "type": "string"
+    },
+    "Status": {
+      "default": "Chưa liên hệ",
+      "type": "enumeration",
+      "enum": [
+        "Chưa liên hệ",
+        "Đã liên hệ"
+      ]
+    },
+    "Birtday": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

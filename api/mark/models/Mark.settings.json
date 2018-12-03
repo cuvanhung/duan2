@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "mark",
+    "description": "Cotain exam mark of all classes"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Level": {
+      "default": "",
+      "type": "string"
+    },
+    "Date": {
+      "default": "",
+      "type": "string"
+    },
+    "Mark": {
+      "default": "",
+      "type": "text"
+    },
+    "Notes": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

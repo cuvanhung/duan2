@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/personnels",
+      "handler": "Personnel.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/personnels/count",
+      "handler": "Personnel.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/personnels/:_id",
+      "handler": "Personnel.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/personnels",
+      "handler": "Personnel.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/personnels/:_id",
+      "handler": "Personnel.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/personnels/:_id",
+      "handler": "Personnel.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "connection": "default",
+  "collectionName": "news",
+  "info": {
+    "name": "news",
+    "description": "create News models"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "default": "",
+      "type": "string"
+    },
+    "Slug": {
+      "default": "",
+      "type": "string"
+    },
+    "Time": {
+      "default": "",
+      "type": "text"
+    },
+    "Location": {
+      "default": "",
+      "type": "text"
+    },
+    "Object": {
+      "default": "",
+      "type": "text"
+    },
+    "Program": {
+      "default": "",
+      "type": "text"
+    },
+    "Content": {
+      "default": "",
+      "type": "text"
+    },
+    "Japanese_Name": {
+      "default": "",
+      "type": "string"
+    },
+    "Japanese_Time": {
+      "default": "",
+      "type": "text"
+    },
+    "Japanese_Location": {
+      "default": "",
+      "type": "text"
+    },
+    "Japanese_Object": {
+      "default": "",
+      "type": "text"
+    },
+    "Japanese_Program": {
+      "default": "",
+      "type": "text"
+    },
+    "Japanese_Content": {
+      "default": "",
+      "type": "text"
+    },
+    "categories": {
+      "model": "categories",
+      "via": "news"
+    },
+    "Status": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "Draft",
+        "Pending",
+        "Published",
+        "Trash"
+      ]
+    },
+    "Thumbnai": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "academics",
+  "info": {
+    "name": "academics",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Exam_Schedule": {
+      "default": "",
+      "type": "text"
+    },
+    "Schedule": {
+      "default": "",
+      "type": "text"
+    },
+    "Mark": {
+      "default": "",
+      "type": "text"
+    }
+  }
+}

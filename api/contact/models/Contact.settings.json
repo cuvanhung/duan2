@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "contact",
+  "info": {
+    "name": "contact",
+    "description": "It is used to store the contact information of the Center"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Tel": {
+      "default": "",
+      "type": "string"
+    },
+    "Hotline": {
+      "default": "",
+      "type": "string"
+    },
+    "Email": {
+      "default": "",
+      "type": "email"
+    },
+    "Facebook": {
+      "default": "",
+      "type": "string"
+    },
+    "Youtube": {
+      "default": "",
+      "type": "string"
+    },
+    "Address": {
+      "default": "",
+      "type": "string"
+    },
+    "Japanese_Address": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

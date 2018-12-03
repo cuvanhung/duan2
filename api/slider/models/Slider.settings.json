@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "slider",
+  "info": {
+    "name": "slider",
+    "description": "It is used to hold the image of the slider"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "default": "",
+      "type": "string"
+    },
+    "Image": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

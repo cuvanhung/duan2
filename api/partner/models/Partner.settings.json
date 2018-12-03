@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "partner",
+  "info": {
+    "name": "partner",
+    "description": "It is used to store logos of related agencies."
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "URL": {
+      "default": "",
+      "type": "string"
+    },
+    "Organization_Name": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

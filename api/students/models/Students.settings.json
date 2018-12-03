@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "students",
+  "info": {
+    "name": "students",
+    "description": "Create model for student"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Fullname": {
+      "default": "",
+      "type": "string"
+    },
+    "Phone": {
+      "default": "",
+      "type": "string"
+    },
+    "Email": {
+      "default": "",
+      "type": "email"
+    },
+    "Birthday": {
+      "default": "",
+      "type": "string"
+    },
+    "ClassID": {
+      "default": "",
+      "type": "string"
+    },
+    "class": {
+      "model": "class",
+      "via": "students"
+    },
+    "StudentID": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}
