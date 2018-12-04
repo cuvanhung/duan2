@@ -11,7 +11,8 @@
   "attributes": {
     "Name": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Image": {
       "model": "file",

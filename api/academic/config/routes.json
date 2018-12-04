@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/schedules",
-      "handler": "Schedule.find",
+      "path": "/academics",
+      "handler": "Academic.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/schedules/count",
-      "handler": "Schedule.count",
+      "path": "/academics/count",
+      "handler": "Academic.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/schedules/:_id",
-      "handler": "Schedule.findOne",
+      "path": "/academics/:_id",
+      "handler": "Academic.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/schedules",
-      "handler": "Schedule.create",
+      "path": "/academics",
+      "handler": "Academic.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/schedules/:_id",
-      "handler": "Schedule.update",
+      "path": "/academics/:_id",
+      "handler": "Academic.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/schedules/:_id",
-      "handler": "Schedule.destroy",
+      "path": "/academics/:_id",
+      "handler": "Academic.destroy",
       "config": {
         "policies": []
       }

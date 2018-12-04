@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Schedule.js service
+ * Events.js service
  *
  * @description: A set of functions similar to controller's actions to avoid code duplication.
  */
@@ -12,21 +12,21 @@ const _ = require('lodash');
 module.exports = {
 
   /**
-   * Promise to fetch all schedules.
+   * Promise to fetch all events.
    *
    * @return {Promise}
    */
 
   fetchAll: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('schedule', params);
+    const filters = strapi.utils.models.convertParams('events', params);
     // Select field to populate.
-    const populate = Schedule.associations
+    const populate = Events.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Schedule
+    return Events
       .find()
       .where(filters.where)
       .sort(filters.sort)
@@ -36,90 +36,90 @@ module.exports = {
   },
 
   /**
-   * Promise to fetch a/an schedule.
+   * Promise to fetch a/an events.
    *
    * @return {Promise}
    */
 
   fetch: (params) => {
     // Select field to populate.
-    const populate = Schedule.associations
+    const populate = Events.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Schedule
-      .findOne(_.pick(params, _.keys(Schedule.schema.paths)))
+    return Events
+      .findOne(_.pick(params, _.keys(Events.schema.paths)))
       .populate(populate);
   },
 
   /**
-   * Promise to count schedules.
+   * Promise to count events.
    *
    * @return {Promise}
    */
 
   count: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('schedule', params);
+    const filters = strapi.utils.models.convertParams('events', params);
 
-    return Schedule
+    return Events
       .count()
       .where(filters.where);
   },
 
   /**
-   * Promise to add a/an schedule.
+   * Promise to add a/an events.
    *
    * @return {Promise}
    */
 
   add: async (values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Schedule.associations.map(ast => ast.alias));
-    const data = _.omit(values, Schedule.associations.map(ast => ast.alias));
+    const relations = _.pick(values, Events.associations.map(ast => ast.alias));
+    const data = _.omit(values, Events.associations.map(ast => ast.alias));
 
     // Create entry with no-relational data.
-    const entry = await Schedule.create(data);
+    const entry = await Events.create(data);
 
     // Create relational data and return the entry.
-    return Schedule.updateRelations({ _id: entry.id, values: relations });
+    return Events.updateRelations({ _id: entry.id, values: relations });
   },
 
   /**
-   * Promise to edit a/an schedule.
+   * Promise to edit a/an events.
    *
    * @return {Promise}
    */
 
   edit: async (params, values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Schedule.associations.map(a => a.alias));
-    const data = _.omit(values, Schedule.associations.map(a => a.alias));
+    const relations = _.pick(values, Events.associations.map(a => a.alias));
+    const data = _.omit(values, Events.associations.map(a => a.alias));
 
     // Update entry with no-relational data.
-    const entry = await Schedule.update(params, data, { multi: true });
+    const entry = await Events.update(params, data, { multi: true });
 
     // Update relational data and return the entry.
-    return Schedule.updateRelations(Object.assign(params, { values: relations }));
+    return Events.updateRelations(Object.assign(params, { values: relations }));
   },
 
   /**
-   * Promise to remove a/an schedule.
+   * Promise to remove a/an events.
    *
    * @return {Promise}
    */
 
   remove: async params => {
     // Select field to populate.
-    const populate = Schedule.associations
+    const populate = Events.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
     // Note: To get the full response of Mongo, use the `remove()` method
     // or add spent the parameter `{ passRawResult: true }` as second argument.
-    const data = await Schedule
+    const data = await Events
       .findOneAndRemove(params, {})
       .populate(populate);
 
@@ -128,7 +128,7 @@ module.exports = {
     }
 
     await Promise.all(
-      Schedule.associations.map(async association => {
+      Events.associations.map(async association => {
         if (!association.via || !data._id) {
           return true;
         }
@@ -149,22 +149,22 @@ module.exports = {
   },
 
   /**
-   * Promise to search a/an schedule.
+   * Promise to search a/an events.
    *
    * @return {Promise}
    */
 
   search: async (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('schedule', params);
+    const filters = strapi.utils.models.convertParams('events', params);
     // Select field to populate.
-    const populate = Schedule.associations
+    const populate = Events.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    const $or = Object.keys(Schedule.attributes).reduce((acc, curr) => {
-      switch (Schedule.attributes[curr].type) {
+    const $or = Object.keys(Events.attributes).reduce((acc, curr) => {
+      switch (Events.attributes[curr].type) {
         case 'integer':
         case 'float':
         case 'decimal':
@@ -188,7 +188,7 @@ module.exports = {
       }
     }, []);
 
-    return Schedule
+    return Events
       .find({ $or })
       .sort(filters.sort)
       .skip(filters.start)

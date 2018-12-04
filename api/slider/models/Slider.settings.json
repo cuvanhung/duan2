@@ -11,13 +11,14 @@
   "attributes": {
     "Name": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Image": {
       "collection": "file",
       "via": "related",
       "plugin": "upload",
-      "required": false
+      "required": true
     }
   }
 }

@@ -3,7 +3,7 @@
   "collectionName": "registers",
   "info": {
     "name": "registers",
-    "description": ""
+    "description": "List of registered students"
   },
   "options": {
     "timestamps": true
@@ -11,11 +11,13 @@
   "attributes": {
     "Fullname": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Email": {
       "default": "",
-      "type": "email"
+      "type": "email",
+      "required": true
     },
     "Class": {
       "default": "",
@@ -27,7 +29,8 @@
     },
     "Phone": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Status": {
       "default": "Chưa liên hệ",

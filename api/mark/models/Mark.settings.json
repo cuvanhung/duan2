@@ -1,9 +1,9 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "mark",
   "info": {
     "name": "mark",
-    "description": "Cotain exam mark of all classes"
+    "description": "Create Mark model"
   },
   "options": {
     "timestamps": true
@@ -13,15 +13,15 @@
       "default": "",
       "type": "string"
     },
-    "Date": {
+    "Exam_date": {
       "default": "",
       "type": "string"
     },
-    "Mark": {
-      "default": "",
-      "type": "text"
-    },
     "Notes": {
+      "default": "",
+      "type": "string"
+    },
+    "Link": {
       "default": "",
       "type": "string"
     }

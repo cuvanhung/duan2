@@ -1,9 +1,9 @@
 {
   "connection": "default",
-  "collectionName": "course",
+  "collectionName": "events",
   "info": {
-    "name": "course",
-    "description": "Create course model"
+    "name": "events",
+    "description": "Create events model"
   },
   "options": {
     "timestamps": true
@@ -18,22 +18,7 @@
       "default": "",
       "type": "string"
     },
-    "Skill": {
-      "default": "",
-      "type": "text",
-      "required": true
-    },
-    "TotalTime": {
-      "default": "",
-      "type": "text",
-      "required": true
-    },
     "Time": {
-      "default": "",
-      "type": "text",
-      "required": true
-    },
-    "Fee": {
       "default": "",
       "type": "text",
       "required": true
@@ -43,26 +28,26 @@
       "type": "text",
       "required": true
     },
+    "Object": {
+      "default": "",
+      "type": "text",
+      "required": true
+    },
+    "Program": {
+      "default": "",
+      "type": "text",
+      "required": true
+    },
+    "categories": {
+      "model": "categories",
+      "via": "events"
+    },
     "JapaneseName": {
       "default": "",
       "type": "string",
       "required": true
     },
-    "JapaneseSkill": {
-      "default": "",
-      "type": "text",
-      "required": true
-    },
-    "JapaneseTotalTime": {
-      "default": "",
-      "type": "text",
-      "required": true
-    },
     "JapaneseTime": {
-      "default": "",
-      "type": "text"
-    },
-    "JapaneseFee": {
       "default": "",
       "type": "text",
       "required": true
@@ -72,19 +57,31 @@
       "type": "text",
       "required": true
     },
-    "Openday": {
+    "JapaneseObject": {
       "default": "",
-      "type": "string"
+      "type": "text",
+      "required": true
     },
-    "File_Upload": {
+    "JapaneseProgram": {
+      "default": "",
+      "type": "text",
+      "required": true
+    },
+    "Thumbnail": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
     },
-    "categories": {
-      "model": "categories",
-      "via": "courses"
+    "Status": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "Draft",
+        "Pending",
+        "Published",
+        "Trash"
+      ]
     }
   }
 }

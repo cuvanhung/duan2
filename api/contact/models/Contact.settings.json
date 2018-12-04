@@ -11,31 +11,38 @@
   "attributes": {
     "Tel": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Hotline": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Email": {
       "default": "",
-      "type": "email"
+      "type": "email",
+      "required": true
     },
     "Facebook": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Youtube": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Address": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Japanese_Address": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

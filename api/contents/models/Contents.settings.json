@@ -3,7 +3,7 @@
   "collectionName": "contents",
   "info": {
     "name": "contents",
-    "description": ""
+    "description": "The content of the article"
   },
   "options": {
     "timestamps": true
@@ -11,7 +11,8 @@
   "attributes": {
     "Name": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Slug": {
       "default": "",
@@ -19,15 +20,18 @@
     },
     "Content": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "Japanese_Name": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Japanese_Content": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "categories": {
       "model": "categories",

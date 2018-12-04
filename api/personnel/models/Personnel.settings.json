@@ -3,7 +3,7 @@
   "collectionName": "personnel",
   "info": {
     "name": "personnel",
-    "description": ""
+    "description": "Staff of the center"
   },
   "options": {
     "timestamps": true
@@ -11,21 +11,24 @@
   "attributes": {
     "Name": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Position": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Information": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "Image": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
-      "required": false
+      "required": true
     }
   }
 }

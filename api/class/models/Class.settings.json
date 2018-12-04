@@ -11,11 +11,13 @@
   "attributes": {
     "Class": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Class_ID": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "students": {
       "collection": "students",

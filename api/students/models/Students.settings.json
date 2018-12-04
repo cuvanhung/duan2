@@ -11,15 +11,18 @@
   "attributes": {
     "Fullname": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Phone": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Email": {
       "default": "",
-      "type": "email"
+      "type": "email",
+      "required": true
     },
     "Birthday": {
       "default": "",
