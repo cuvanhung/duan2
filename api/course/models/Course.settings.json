@@ -77,7 +77,7 @@
       "type": "string"
     },
     "File_Upload": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "plugin": "upload",
       "required": false

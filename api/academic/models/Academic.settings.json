@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "academic",
   "info": {
     "name": "academic",
     "description": "create academic model"
@@ -11,7 +11,8 @@
   "attributes": {
     "Class_Name": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Dead_Line": {
       "default": "",

@@ -23,12 +23,12 @@
       "type": "text",
       "required": true
     },
-    "JapaneseName": {
+    "Japanese_Name": {
       "default": "",
       "type": "string",
       "required": true
     },
-    "JapaneseContent": {
+    "Japanese_Content": {
       "default": "",
       "type": "text",
       "required": true
@@ -37,7 +37,7 @@
       "model": "file",
       "via": "related",
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "Status": {
       "default": "Pending",
@@ -48,6 +48,16 @@
         "Published",
         "Trash"
       ]
+    },
+    "Object": {
+      "default": "",
+      "type": "text",
+      "required": true
+    },
+    "Object_Japanese": {
+      "default": "",
+      "type": "text",
+      "required": true
     }
   }
 }
