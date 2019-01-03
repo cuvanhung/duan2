@@ -58,6 +58,10 @@
       "default": "",
       "type": "text",
       "required": true
+    },
+    "categories": {
+      "model": "categories",
+      "via": "news"
     }
   }
 }

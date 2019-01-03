@@ -23,6 +23,10 @@
     "URL ": {
       "default": "",
       "type": "string"
+    },
+    "Slug": {
+      "default": "",
+      "type": "string"
     }
   }
 }

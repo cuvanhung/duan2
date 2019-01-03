@@ -16,7 +16,8 @@
     },
     "Slug": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Japanese_Name": {
       "default": "",
@@ -36,12 +37,12 @@
     "Parent": {
       "model": "categories"
     },
-    "events": {
-      "collection": "events",
-      "via": "categories"
-    },
     "courses": {
       "collection": "course",
+      "via": "categories"
+    },
+    "news": {
+      "collection": "news",
       "via": "categories"
     }
   }

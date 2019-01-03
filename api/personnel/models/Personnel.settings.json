@@ -29,6 +29,21 @@
       "via": "related",
       "plugin": "upload",
       "required": true
+    },
+    "Japanese_Name": {
+      "default": "",
+      "type": "string",
+      "required": true
+    },
+    "Japanese_Position": {
+      "default": "",
+      "type": "string",
+      "required": true
+    },
+    "Japanese_Information": {
+      "default": "",
+      "type": "text",
+      "required": true
     }
   }
 }

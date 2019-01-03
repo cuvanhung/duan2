@@ -16,7 +16,8 @@
     },
     "Slug": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Content": {
       "default": "",

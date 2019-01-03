@@ -40,7 +40,7 @@
         "Đã liên hệ"
       ]
     },
-    "Birtday": {
+    "BirthDay": {
       "default": "",
       "type": "string"
     }
